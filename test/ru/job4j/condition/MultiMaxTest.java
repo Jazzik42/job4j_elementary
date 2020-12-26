@@ -12,4 +12,10 @@ public class MultiMaxTest {
     int result = MultiMax.max(1, 4, 2);
     assertThat(result, is(4));
     }
+
+    @Test
+    public void whenSecondThirdMax() {
+        int result = MultiMax.max(10, 15, 15);
+        assertThat(result, is(15));
+    }
 }
