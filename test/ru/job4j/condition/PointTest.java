@@ -36,7 +36,7 @@ public class PointTest {
     }
 
     @Test
-    public void when12to12then141() {
+    public void when11to22then141() {
         int x1 = 1;
         int x2 = 2;
         int y1 = 1;
