@@ -35,7 +35,7 @@ public class MatrixCheck {
         boolean result = false;
 
         for (int i = 0; i < board.length; i++) {
-            if (board[i][0] == 'X' || board[0][i] == 'X') {
+            if (board[i][i] == 'X') {
                 if (monoHorizontal(board, i) || monoVertical(board, i)) {
                     result = true;
                     break;
