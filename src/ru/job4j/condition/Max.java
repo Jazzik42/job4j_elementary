@@ -7,6 +7,14 @@ public class Max {
         return result;
     }
 
+    public static int max(int left, int right, int mid) {
+        return max(mid, max(left, right));
+    }
+
+    public static int max(int left, int right, int mid, int top) {
+        return max(max(left, right), max(mid, top));
+    }
+
     public static void main(String[] args) {
         int left = 4;
         int right = 3;
