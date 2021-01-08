@@ -7,17 +7,17 @@ public class Battery {
         this.load = load;
     }
 
-    public void exchange(Battery another, int value) {
-        this.load = this.load - value;
-        another.load = another.load + value;
+    public void exchange(Battery another) {
+        another.load = this.load + another.load;
+        this.load = 0;
     }
 
     public static void main(String[] args) {
         Battery phone = new Battery(88);
         Battery watch = new Battery(48);
-        System.out.println("Phone value : " + phone.load + ". second : " + watch.load);
-        phone.exchange(watch, 52);
-        System.out.println("Phone value : " + phone.load + ". second : " + watch.load);
+        System.out.println("Phone value : " + phone.load + ". Watch value : " + watch.load);
+        phone.exchange(watch);
+        System.out.println("Phone value : " + phone.load + ". Watch value : " + watch.load);
 
     }
 }
