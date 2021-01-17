@@ -2,7 +2,6 @@ package ru.job4j.io;
 
 import java.util.Scanner;
 import java.util.Random;
-import java.util.logging.SocketHandler;
 
 public class MagicBall {
 
@@ -13,8 +12,8 @@ public class MagicBall {
         int answer = new Random().nextInt(3);
         switch (answer) {
             case 0:
-            System.out.println("Может быть да, может быть нет.");
-            break;
+                System.out.println("Может быть да, может быть нет.");
+                break;
             case 1:
                 System.out.println("Тебе больше нечего спрашивать?");
                 break;
