@@ -12,15 +12,20 @@ public class Dendy {
             String player = turn ? "Первый игрок" : "Второй игрок";
             System.out.println(player + " введите число от 1 до 3:");
             int matches = Integer.parseInt(input.nextLine());
-            turn = !turn;
-            count = count - matches;
-            System.out.println("Осталось спичек: " + count);
+            if (matches >= 1 && matches <= 3) {
+                turn = !turn;
+                count = count - matches;
+                System.out.println("Осталось спичек: " + count);
 
-        }
-        if (!turn) {
-            System.out.println("Выиграл первый игрок");
-        } else {
-            System.out.println("Выиграл второй игрок");
+                if (!turn) {
+                    System.out.println("Выиграл первый игрок");
+                } else {
+                    System.out.println("Выиграл второй игрок");
+                }
+            } else {
+                System.out.println("Вы ввели неверное число, пожалуйста повторите");
+                continue;
+            }
         }
     }
 }
