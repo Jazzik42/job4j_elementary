@@ -1,8 +1,8 @@
 package ru.job4j.oop;
 
-public class Student {
-
-    public void music() {
+public class Student extends Object {
+}
+   /* public void music() {
         System.out.println("Tra tra tra");
     }
 
