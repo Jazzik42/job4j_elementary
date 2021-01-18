@@ -15,17 +15,18 @@ public class Dendy {
             if (matches >= 1 && matches <= 3) {
                 turn = !turn;
                 count = count - matches;
-                System.out.println("Осталось спичек: " + count);
-
+                System.out.println(count > 0 ? "Осталось спичек: " + count : "Осталось 0 спичек.");
+            }  else {
+                System.out.println("Вы ввели неверное число, пожалуйста повторите");
+                continue;
+            }
+        }
                 if (!turn) {
                     System.out.println("Выиграл первый игрок");
                 } else {
                     System.out.println("Выиграл второй игрок");
                 }
-            } else {
-                System.out.println("Вы ввели неверное число, пожалуйста повторите");
-                continue;
+
             }
-        }
+
     }
-}
