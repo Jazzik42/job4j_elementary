@@ -7,6 +7,7 @@ public class FindEl {
         for (int i = 0; i < value.length; i++) {
             if (value[i] == key) {
                 rsl = i;
+                break;
             }
         }
         if (rsl == -1) {
@@ -23,5 +24,6 @@ public class FindEl {
         } catch (ElementNotFoundException e) {
             e.printStackTrace();
         }
+        System.out.println("выполним код");
     }
 }
