@@ -14,11 +14,9 @@ public class PhoneDictionary {
         ArrayList<Person> result = new ArrayList<>();
         for (int i = 0; i < persons.size(); i++) {
             Person ps = persons.get(i);
-            String person = ps.getName()
-                    + ps.getSurname()
-                    + ps.getAddress()
-                    + ps.getPhone();
-            if (person.contains(key)) {
+            if (ps.getName().contains(key) || ps.getSurname().contains(key)
+                                            || ps.getAddress().contains(key)
+                                            || ps.getPhone().contains(key)) {
                 result.add(ps);
             }
         }
