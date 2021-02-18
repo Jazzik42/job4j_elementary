@@ -2,7 +2,16 @@ package ru.job4j.bank;
 
 import java.util.Objects;
 
+/**
+ * Класс описывает счет клиента банка
+ * @author Ramil MUZIPOV
+ * @version 1.0
+ */
 public class Account {
+    /**
+     * Счет клиента состоит из реквизитов
+     * и текущего баланса
+     */
     private String requisite;
     private double balance;
 
@@ -27,6 +36,13 @@ public class Account {
         this.balance = balance;
     }
 
+    /**
+     * Переопределен метод equals, так, чтобы
+     * сравнения объектов класса Account происходило
+     * по полю класса requisite
+     * @param o в параметр идет второй объект сравнения
+     * @return возвращает true, если объекты равны
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -39,6 +55,10 @@ public class Account {
         return Objects.equals(requisite, ab.requisite);
     }
 
+    /**
+     * Возвращает hashCode поля requisite
+     * @return  hashCode
+     */
     @Override
     public int hashCode() {
         return Objects.hash(requisite);
