@@ -10,11 +10,8 @@ public class Profile {
         return address;
     }
 
-   public Profile(Address address) {
+    public Profile(Address address) {
         this.address = address;
     }
-
-    public static List<Address> collect(List<Profile> profiles) {
-        return profiles.stream().map(x -> x.getAddress()).collect(Collectors.toList());
-    }
 }
+

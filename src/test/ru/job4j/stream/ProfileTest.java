@@ -22,6 +22,6 @@ public class ProfileTest {
                 pf2.getAddress(),
                 pf3.getAddress()
         );
-        assertThat(Profile.collect(list), is(expect));
+        assertThat(Profiles.collect(list), is(expect));
     }
 }
