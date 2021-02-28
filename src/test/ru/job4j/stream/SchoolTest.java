@@ -18,7 +18,7 @@ public class SchoolTest {
     public void setUp() {
         students.add(new Student(10, "Surname1"));
         students.add(new Student(20, "Surname2"));
-        students.add(new Student(30, "Surname3"));
+        students.add(new Student(30, "Surname2"));
         students.add(new Student(40, "Surname4"));
         students.add(new Student(50, "Surname5"));
         students.add(new Student(60, "Surname6"));
@@ -70,7 +70,6 @@ public class SchoolTest {
         HashMap<String, Student> studentsMap = new HashMap<>();
         studentsMap.put("Surname1", new Student(10, "Surname1"));
         studentsMap.put("Surname2", new Student(20, "Surname2"));
-        studentsMap.put("Surname3", new Student(30, "Surname3"));
         studentsMap.put("Surname4", new Student(40, "Surname4"));
         studentsMap.put("Surname5", new Student(50, "Surname5"));
         studentsMap.put("Surname6", new Student(60, "Surname6"));
