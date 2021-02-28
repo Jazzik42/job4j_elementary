@@ -24,4 +24,22 @@ public class ProfileTest {
         );
         assertThat(Profiles.collect(list), is(expect));
     }
+
+    @Test
+    public void sorted() {
+        Profile pf1 = new Profile(new Address("Moscow", "Lenin1", 1, 1));
+        Profile pf2 = new Profile(new Address("Moscow", "Lenin2", 2, 2));
+        Profile pf3 = new Profile(new Address("Anapa", "Lenin3", 3, 3));
+        Profile pf4 = new Profile(new Address("Anapa", "Lenin3", 3, 3));
+        Profile pf5 = new Profile(new Address("Anapa", "Lenin3", 3, 3));
+        List<Profile> list = List.of(
+                pf1, pf2, pf3, pf4, pf5
+        );
+        List<Address> expect = List.of(
+                pf3.getAddress(),
+                pf1.getAddress()
+
+        );
+        assertThat(Profiles.collect(list), is(expect));
+    }
 }
