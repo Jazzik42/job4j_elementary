@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.function.Predicate;
 
@@ -61,5 +62,21 @@ public class SchoolTest {
         expected.add(new Student(30, "Surname3"));
         expected.add(new Student(40, "Surname4"));
         assertThat(rsl, is(expected));
+    }
+
+    @Test
+    public void whenCollectMap() {
+        School sc = new School();
+        HashMap<String, Student> studentsMap = new HashMap<>();
+        studentsMap.put("Surname1", new Student(10, "Surname1"));
+        studentsMap.put("Surname2", new Student(20, "Surname2"));
+        studentsMap.put("Surname3", new Student(30, "Surname3"));
+        studentsMap.put("Surname4", new Student(40, "Surname4"));
+        studentsMap.put("Surname5", new Student(50, "Surname5"));
+        studentsMap.put("Surname6", new Student(60, "Surname6"));
+        studentsMap.put("Surname7", new Student(70, "Surname7"));
+        studentsMap.put("Surname8", new Student(80, "Surname8"));
+        studentsMap.put("Surname9", new Student(90, "Surname9"));
+       assertThat(sc.collectMap(students), is(studentsMap));
     }
 }
