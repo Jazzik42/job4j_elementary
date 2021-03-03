@@ -9,7 +9,7 @@ public class PriorityQueueTest {
 
     @Test
     public void whenHigherPriority() {
-        PriorityQueue pq = new PriorityQueue();
+        var pq = new PriorityQueue();
         pq.put(new Task("low", 5));
         pq.put(new Task("ugrent", 1));
         pq.put(new Task("midle", 3));
