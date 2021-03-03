@@ -12,8 +12,8 @@ public class DepartmentsTest {
 
     @Test
     public void fillGaps() {
-        List<String> deps = new ArrayList<>(Arrays.asList("K1/SK1/SSK1", "K2/SK2"));
-        List<String> expected = new ArrayList<>(Arrays.asList("K1", "K1/SK1", "K1/SK1/SSK1",
+        List<String> deps = new ArrayList<>(List.of("K1/SK1/SSK1", "K2/SK2"));
+        List<String> expected = new ArrayList<>(List.of("K1", "K1/SK1", "K1/SK1/SSK1",
                 "K2", "K2/SK2"));
         assertThat(Departments.fillGaps(deps), is(expected));
     }

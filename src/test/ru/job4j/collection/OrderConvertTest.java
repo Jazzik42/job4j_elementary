@@ -16,7 +16,7 @@ public class OrderConvertTest {
     public void process() {
         Order order1 = new Order("1213", "Papa");
         Order order2 = new Order("12131", "Mama");
-        List<Order> list = new ArrayList<>(Arrays.asList(order1, order2));
+        List<Order> list = new ArrayList<>(List.of(order1, order2));
         HashMap<String, Order> map = new HashMap<>();
         map.put(order1.getNumber(), order1);
         map.put(order2.getNumber(), order2);
