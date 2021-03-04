@@ -77,10 +77,9 @@ public class BankService {
                     .stream()
                     .filter(x -> x.getRequisite().equals(requisite))
                     .findFirst();
-        } else {
-            return Optional.empty();
         }
-    }
+        return Optional.empty();
+        }
 
     /**
      * Метод позволяет перевести сумму денег amount
